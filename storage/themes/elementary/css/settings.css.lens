@@ -6,6 +6,7 @@
 Title:			Elementary Theme
 Author:			Sebastian Pinehurst
 
+
 /* GENERAL STYLES
 ----------------------------------------------- */
 
@@ -73,6 +74,283 @@ hr {
 	height:1px;
 	background:$color_hr;
 	margin-bottom:1.6364rem;
+}
+
+/* FORMS (BASIC)
+----------------------------------------------- */
+
+fieldset {
+	position:relative;
+	margin:0 0 0.5rem 0;
+}
+
+fieldset legend {}
+
+label {
+	font-size: 0.875rem;
+	color: $color_text;
+	cursor: pointer;
+	display: block;
+	font-weight: normal;
+	margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea
+{
+	-webkit-appearance: none;
+	border-radius: 0;
+	background-color: $color_bg;
+	border-style: solid;
+	border-width: 1px;
+	border-color: $color_hr;
+	color: $color_h;
+	display: block;
+	font-size: 0.875rem;
+	font-family:inherit !important;
+	margin: 0 0 1em 0;
+	padding: 0.5em;
+	height: auto;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	border-color:$color_text;
+	outline: none;
+}
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+input[type="date"]:disabled,
+input[type="datetime"]:disabled,
+input[type="datetime-local"]:disabled,
+input[type="month"]:disabled,
+input[type="week"]:disabled,
+input[type="email"]:disabled,
+input[type="number"]:disabled,
+input[type="search"]:disabled,
+input[type="tel"]:disabled,
+input[type="time"]:disabled,
+input[type="url"]:disabled,
+input[type="color"]:disabled,
+textarea:disabled {
+	background-color: #ddd;
+	cursor: default;
+}
+input[type="text"][disabled],
+input[type="text"][readonly],
+fieldset[disabled] input[type="text"],
+input[type="password"][disabled],
+input[type="password"][readonly],
+fieldset[disabled] input[type="password"],
+input[type="date"][disabled],
+input[type="date"][readonly],
+fieldset[disabled] input[type="date"],
+input[type="datetime"][disabled],
+input[type="datetime"][readonly],
+fieldset[disabled] input[type="datetime"],
+input[type="datetime-local"][disabled],
+input[type="datetime-local"][readonly],
+fieldset[disabled] input[type="datetime-local"],
+input[type="month"][disabled],
+input[type="month"][readonly],
+fieldset[disabled] input[type="month"],
+input[type="week"][disabled],
+input[type="week"][readonly],
+fieldset[disabled] input[type="week"],
+input[type="email"][disabled],
+input[type="email"][readonly],
+fieldset[disabled] input[type="email"],
+input[type="number"][disabled],
+input[type="number"][readonly],
+fieldset[disabled] input[type="number"],
+input[type="search"][disabled],
+input[type="search"][readonly],
+fieldset[disabled] input[type="search"],
+input[type="tel"][disabled],
+input[type="tel"][readonly],
+fieldset[disabled] input[type="tel"],
+input[type="time"][disabled],
+input[type="time"][readonly],
+fieldset[disabled] input[type="time"],
+input[type="url"][disabled],
+input[type="url"][readonly],
+fieldset[disabled] input[type="url"],
+input[type="color"][disabled],
+input[type="color"][readonly],
+fieldset[disabled] input[type="color"],
+textarea[disabled],
+textarea[readonly],
+fieldset[disabled] textarea {
+	background-color: #ddd;
+	cursor: default;
+}
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+	margin: 0 0 1rem 0;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+	display: inline-block;
+	margin-left: 0.5rem;
+	margin-right: 1rem;
+	margin-bottom: 0;
+	vertical-align: baseline;
+}
+
+/* Respect enforced amount of rows for textarea */
+textarea[rows] {
+	height: auto;
+}
+
+/* Not allow resize out of parent */
+textarea {
+	max-width: 100%;
+}
+
+button, .button {
+	border-style: solid;
+	border-width: 0;
+	cursor: pointer;
+	font-family: inherit;
+	font-weight: normal;
+	line-height: normal;
+	margin: 0 0 1em 0;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+	display: inline-block;
+	padding: 0.75rem 1.75rem;
+	font-size: 1rem;
+	background-color:$color_links;
+	color:$color_text_reverse;
+}
+button:hover, button:focus, .button:hover, .button:focus {
+	background-color: $color_links_hover;
+	color:$color_text_reverse;
+}
+button.large, .button.large {
+	padding: 1.125rem 2.25rem;
+	font-size: 1.25rem;
+}
+button.small, .button.small {
+	padding: 0.875rem 1.75rem 0.9375rem;
+	font-size: 0.8125rem;
+}
+button.tiny, .button.tiny {
+	padding: 0.625rem 1.25rem 0.6875rem;
+	font-size: 0.6875rem;
+}
+button.disabled, button[disabled], .button.disabled, .button[disabled] {
+	opacity: 0.5;
+}
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+}
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/* CONTACT FORM
+----------------------------------------------- */
+
+.k-contact-form {
+	width: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+	.k-contact-form {
+		width: 100%;
+	}
+}
+
+.k-contact-form-success {
+	border-top:1px solid $color_hr;
+	border-bottom:1px solid $color_hr;
+	padding:1em 0;
+
+}
+
+.k-contact-form-success:before {
+	content: '✔';
+	color:$color_h;
+	margin-right: 6px;
+}
+
+.k-contact-form-required-field label:after {
+	content: '*';
+	color: red;
+}
+
+.k-content-form-processing {
+	opacity: 0.5;
+}
+
+.k-content-form-processing button[type="submit"] {
+	pointer-events: none !important;
+}
+
+.k-contact-form-error label {
+}
+
+.k-contact-form-error label:before {
+	position:absolute;
+	right:0;
+	color:red;
+	content:"This field is required";
+}
+
+.k-contact-form-error input[type="text"],
+.k-contact-form-error input[type="password"],
+.k-contact-form-error input[type="date"],
+.k-contact-form-error input[type="datetime"],
+.k-contact-form-error input[type="datetime-local"],
+.k-contact-form-error input[type="month"],
+.k-contact-form-error input[type="week"],
+.k-contact-form-error input[type="email"],
+.k-contact-form-error input[type="number"],
+.k-contact-form-error input[type="search"],
+.k-contact-form-error input[type="tel"],
+.k-contact-form-error input[type="time"],
+.k-contact-form-error input[type="url"],
+.k-contact-form-error input[type="color"],
+.k-contact-form-error textarea
+{
+	border-color:red;
 }
 
 /* LINKS
@@ -237,7 +515,10 @@ p.meta-links a:hover {
 }
 
 img.k-lazy-loading {
-	background: url(css/$style/spinner.gif) center center no-repeat;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:16px 16px;
+	background-image: url(css/$style/spinner.gif);
 }
 
 section {
@@ -919,7 +1200,11 @@ div.essay-pag span.cell.right {
 }
 
 #ss_spinner {
-	background:$color_bg url(css/$style/spinner.gif) center center no-repeat;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:16px 16px;
+	background-image: url(css/$style/spinner.gif);
+	background-color:$color_bg;
 	width:24px;
 	height:24px;
 	position:absolute;

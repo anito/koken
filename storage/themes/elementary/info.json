@@ -1,6 +1,6 @@
 {
 	"name": "Elementary",
-	"version": "1.5.5",
+	"version": "1.5.8",
 	"description": "Straightforward, utilitarian theme that avoids fancy layout schemes by presenting content in a clear, simple manner. The theme is perfect for archivists or photographers with deep collections of content.",
 	"demo": "http://demo.koken.me/#elementary",
 	"documentation": "https://store.koken.me/themes/elementary",
@@ -8,7 +8,7 @@
 		"name": "Koken",
 		"link": "https://store.koken.me/authors/koken"
 	},
-	"koken_version_required": "0.15.0",
+	"koken_version_required": "0.18.4",
 
 	"navigation_groups": {
 		"footer": {
@@ -31,9 +31,10 @@
 			"variables": {
 				"color_bg": "#fff",
 				"color_text": "#787878",
+				"color_text_reverse": "#fff",
 				"color_hr": "#dedede",
 				"color_links": "#222",
-				"color_links_hover": "#222",
+				"color_links_hover": "#000",
 				"color_bq": "#888",
 				"color_text_meta": "#868686",
 				"color_h": "#222",
@@ -50,6 +51,7 @@
 			"variables": {
 				"color_bg": "#000",
 				"color_text": "#818181",
+				"color_text_reverse": "#000",
 				"color_hr": "#333",
 				"color_links": "#fff",
 				"color_links_hover": "#aaa",
@@ -69,6 +71,7 @@
 			"variables": {
 				"color_bg": "#2b2b2b",
 				"color_text": "#888",
+				"color_text_reverse": "#2b2b2b",
 				"color_hr": "#444",
 				"color_links": "#eee",
 				"color_links_hover": "#eee",
@@ -565,6 +568,30 @@
 						{"value": "uniform", "label":"Uniform"}
 					],
 					"value": "proportional",
+					"scope": [ "album" ]
+				},
+				"album_detail_crop_size": {
+					"label": "Aspect ratio",
+					"type": "select",
+					"options": [
+						{ "label": "4:3", "value": "4:3" },
+						{ "label": "3:4", "value": "3:4" },
+						{ "label": "3:2", "value": "3:2" },
+						{ "label": "2:3", "value": "2:3" },
+						{ "label": "2:1", "value": "2:1" },
+						{ "label": "1:1", "value": "1:1" },
+						{ "label": "16:9", "value": "16:9" }
+					],
+					"value": "1:1",
+					"dependencies": {
+	                    "evaluate": "all",
+	                    "conditions": [
+	                         {
+	                              "option": "albums_detail_crop",
+	                              "equals": "uniform"
+	                         }
+	                    ]
+	               	},
 					"scope": [ "album" ]
 				},
 				"content_index_crop": {

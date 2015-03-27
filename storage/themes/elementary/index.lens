@@ -79,16 +79,16 @@
 					<li>
 						<figure>
 							<koken:covers>
-								<koken:first>
-									<koken:link title="View {{ album.title }}">
+								<koken:link title="View {{ album.title }}">
+									<koken:first>
 										<koken:if data="settings.albums_crop" equals="uniform">
 											<koken:img size="{{ settings.albums_crop_size }}" lazy="true" />
 										</koken:if>
 										<koken:if data="settings.albums_crop" equals="proportional">
 											<koken:img lazy="true" />
 										</koken:if>
-									</koken:link>
-								</koken:first>
+									</koken:first>
+								</koken:link>
 							</koken:covers>
 							<figcaption>
 								<koken:link title="View {{ album.title }}">
